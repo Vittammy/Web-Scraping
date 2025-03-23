@@ -2,25 +2,22 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-# url do site escolhido para o scraping
-url = "https://g1.globo.com"
+url = "https://g1.globo.com" #----- url do site escolhido para o scraping
 
-# envia solicitação HTTP GET para o site
-response = requests.get(url)
+response = requests.get(url) #----- envia solicitação HTTP GET para o site
 
 # verifica a solicitação
 if response.status_code == 200:
-    # utiliza o BeautifulSoup para analisar o conteudo HTML
-    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    soup = BeautifulSoup(response.text, 'html.parser') #----- utiliza o BeautifulSoup para analisar o conteudo HTML
+    
+    titles = soup.find_all('a', class_='feed-post-link gui-color-primary gui-color-hover') #- encontra todos os titulos de noticias
 
-    # encontra todos os titulos de noticias
-    titles = soup.find_all('a', class_='feed-post-link gui-color-primary gui-color-hover')
-
-    # criação de arquivo HTML
+    #----------------- criação de arquivo HTML
     with open("noticias.html", "w", encoding="utf-8") as file:
         file.write("<html><head><title>Notícias G1</title></head>\n")
 
-        #style
+        #------------- style
         file.write("""
             <style>
                 body { font-family: Arial, sans-serif; margin: 20px; }
@@ -35,19 +32,19 @@ if response.status_code == 200:
         file.write("<body>\n<h1>Últimas Notícias do G1</h1>\n")
         file.write("<ul>\n")
 
-        # exibe os titulos das noticias
+        #----- exibe os titulos das noticias
         for title in titles:
-            text = title.get_text() # texto do titulo
-            link = title.get('href') # link da noticia
+            text = title.get_text() #-- texto do titulo
+            link = title.get('href') #-- link da noticia
 
             if link:
                 file.write(f'<li><a href="{link}">{text}</a></li>\n')
             else:
                 file.write(f'<li>{text} (Link não disponível)</li>\n')
 
-            time.sleep(1) # pausa de 1s para evitar sobrecarga
+            time.sleep(1) #----- pausa de 1s para evitar sobrecarga
 
-            # fim do html
+            #--------------------------------------------------------------------- fim do html
             file.write("</ul>\n")
             file.write("</body></html>\n")
 
