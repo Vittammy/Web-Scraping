@@ -20,14 +20,13 @@ Este projeto utiliza Python para coletar notícias do site G1 e gerar um arquivo
 
 ## 🚀 **Como Usar:**
 1. Clone o repositório.
-
 2. Instale as dependências:
-``` bash
-Copiar
-pip install requests beautifulsoup4
-Execute o script scraping.py para gerar o arquivo noticias.html.
 ```
-3. Abra o arquivo noticias.html no seu navegador para visualizar as últimas notícias.
+bash
+pip install requests beautifulsoup4
+```
+3. Execute o script scraping.py para gerar o arquivo noticias.html.
+4. Abra o arquivo noticias.html no seu navegador para visualizar as últimas notícias.
 
 ---
 
