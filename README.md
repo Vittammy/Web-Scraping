@@ -1,16 +1,17 @@
-## Web Scraping de Notícias (G1)
-Este projeto utiliza Python para coletar notícias do site G1 e gerar um arquivo HTML com os títulos e links das notícias. Utilizamos as bibliotecas Requests e BeautifulSoup para realizar o scraping e extrair as informações de forma prática e eficiente.
+## Web Scraping de Notícias (G1) 📰✨
+Este projeto utiliza Python para coletar notícias do site G1 e gerar um arquivo HTML com os títulos e links das notícias. Utilizei as bibliotecas Requests e BeautifulSoup para realizar o scraping e extrair as informações de forma prática e eficiente.
 
 ---
 
 **Como Funciona:**
+
 O Python faz uma solicitação HTTP ao site do G1.
 
-Usamos o BeautifulSoup para analisar o HTML da página.
+O BeautifulSoup é utilizado para analisar o HTML da página.
 
-Extraímos os títulos e links das notícias.
+Extrai os títulos e links das notícias.
 
-Criamos um arquivo HTML contendo os dados, que pode ser facilmente visualizado no navegador.
+E cria-se um arquivo HTML contendo os dados, que pode ser facilmente visualizado no navegador.
 
 ---
 
@@ -18,6 +19,8 @@ Criamos um arquivo HTML contendo os dados, que pode ser facilmente visualizado n
 * Python (com Requests e BeautifulSoup)
 
 * HTML (para exibir os dados de maneira simples e organizada)
+
+---
 
 **Como Usar:**
 Clone o repositório.
