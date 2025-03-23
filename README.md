@@ -19,19 +19,19 @@ Este projeto utiliza Python para coletar notícias do site G1 e gerar um arquivo
 ---
 
 ## 🚀 **Como Usar:**
-- Clone o repositório.
+1. Clone o repositório.
 
-- Instale as dependências:
-* bash
-* Copiar
-* pip install requests beautifulsoup4
-* Execute o script scraping.py para gerar o arquivo noticias.html.
-
-- Abra o arquivo noticias.html no seu navegador para visualizar as últimas notícias.
+2. Instale as dependências:
+``` bash
+Copiar
+pip install requests beautifulsoup4
+Execute o script scraping.py para gerar o arquivo noticias.html.
+```
+3. Abra o arquivo noticias.html no seu navegador para visualizar as últimas notícias.
 
 ---
 
 ## 🔑 **Por que é interessante:**
---> Aprender a fazer web scraping é uma habilidade poderosa para automação e coleta de dados.
---> Você pode adaptar o código para coletar informações de qualquer site.
---> Este projeto é simples, mas tem grande potencial de aplicação!
+- Aprender a fazer web scraping é uma habilidade poderosa para automação e coleta de dados.
+- Você pode adaptar o código para coletar informações de qualquer site.
+- Este projeto é simples, mas tem grande potencial de aplicação!
